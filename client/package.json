@@ -1,0 +1,60 @@
+{
+  "name": "smart-inventory-client",
+  "version": "1.0.0",
+  "description": "A decentralized application build on Lisk that tracks the history and life path of valuable items",
+  "contributors": [
+    "lemii <lemiidelegate@gmail.com"
+  ],
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "antd": "^4.3.3",
+    "axios": "^0.19.2",
+    "lisk-elements": "^3.0.2",
+    "lisk-sdk": "^3.0.2",
+    "moment": "^2.26.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "smart-inventory-blockchain": "file:../blockchain",
+    "tailwindcss": "^1.4.6",
+    "typescript": "~3.7.2",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "@ant-design/icons": "^4.2.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-dom": "^5.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

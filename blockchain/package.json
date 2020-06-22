@@ -1,0 +1,23 @@
+{
+  "name": "smart-inventory-blockchain",
+  "version": "1.0.0",
+  "description": "A decentralized application build on Lisk that tracks the history and life path of valuable items",
+  "main": "build/transactions/index.js",
+  "contributors": [
+    "lemii <lemiidelegate@gmail.com"
+  ],
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js | npx bunyan -o short",
+    "testTx": "npm run build && node build/scripts/tx.js"
+  },
+  "dependencies": {
+    "@moosty/lisk-extended-api": "0.0.8",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "lisk-sdk": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.3"
+  }
+}
