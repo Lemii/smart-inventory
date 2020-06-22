@@ -51,19 +51,41 @@ function CatalogItemPage() {
         <Col xs={24} sm={24} md={12} lg={12} xl={12} className="mb-5">
           <Card title="Network statistics" loading={isLoading}>
             {items.length ? (
-              <Row>
-                <Col span={12} className="mb-5">
-                  <Statistic title={`Registered ${item.name}s`} value={items.length} />
-                </Col>
-                <Col span={12} className="mb-5">
-                  <Statistic
-                    title={`Most valuable ${item.name}`}
-                    prefix="$"
-                    value={items[items.length - 1].asset.itemProperties.lastValue}
-                    suffix={<Link to={`/item/${items[items.length - 1].address}`}>View</Link>}
-                  />
-                </Col>
-              </Row>
+              <>
+                <Row>
+                  <Col span={12} className="mb-5">
+                    <Statistic title={`Registered ${item.name}s`} value={items.length} />
+                  </Col>
+
+                  <Col span={12} className="mb-5">
+                    <Statistic
+                      title={`Average value`}
+                      prefix="$"
+                      value={items.reduce((a, b) => a + b.asset.itemProperties.lastValue, 0) / 1}
+                    />
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col span={12} className="mb-5">
+                    <Statistic
+                      title={`Most valuable ${item.name}`}
+                      prefix="$"
+                      value={items[items.length - 1].asset.itemProperties.lastValue}
+                      suffix={<Link to={`/item/${items[items.length - 1].address}`}>View</Link>}
+                    />
+                  </Col>
+
+                  <Col span={12} className="mb-5">
+                    <Statistic
+                      title={`Least valuable ${item.name}`}
+                      prefix="$"
+                      value={items[0].asset.itemProperties.lastValue}
+                      suffix={<Link to={`/item/${items[0].address}`}>View</Link>}
+                    />
+                  </Col>
+                </Row>
+              </>
             ) : (
               <Empty />
             )}
