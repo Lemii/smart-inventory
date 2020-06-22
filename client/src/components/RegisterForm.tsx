@@ -25,7 +25,7 @@ const RegisterForm = () => {
   const onFinish = async (values: any) => {
     const registration = {
       identifier: values.identifier,
-      numOfOwners: values.owners ? Number(values.owners + 1) : 1,
+      numOfOwners: values.owners ? Number(values.owners) + 1 : 1,
       originalValue: Number(values.originalValue),
       lastValue: Number(values.lastValue),
       state: Number(values.state)
