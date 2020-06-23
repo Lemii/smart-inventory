@@ -105,38 +105,32 @@ export const fetchItemTransactions = async (item: string) => {
   return { registration, transfers };
 };
 
-export const searchByItemId = async (id: string) => {
+export const searchByItemId = (id: string): Promise<ItemAccount[]> => {
   const url = `${EXTENDED_URL}/extended-api/accounts`;
   const query = `?asset=itemProperties.identifier&contains=${id}`;
 
-  const res: ItemAccount[] = await axios
+  return axios
     .get(url + query)
     .then((res) => res.data.data)
     .catch((err) => []);
-
-  return res;
 };
 
-export const fetchOwnedItems = async (address: string): Promise<ItemAccount[]> => {
+export const fetchOwnedItems = (address: string): Promise<ItemAccount[]> => {
   const url = `${EXTENDED_URL}/extended-api/accounts`;
   const query = `?asset=owner&contains=${address}`;
 
-  const res = await axios
+  return axios
     .get(url + query)
     .then((res) => res.data.data)
     .catch((err) => []);
-
-  return res;
 };
 
-export const fetchUser = async (address: string): Promise<Account> => {
+export const fetchUser = (address: string): Promise<Account> => {
   const url = `${process.env.REACT_APP_BASE_URL}/api/accounts`;
   const query = `?address=${address}`;
 
-  const res = await axios
+  return axios
     .get(url + query)
     .then((res) => res.data.data[0])
     .catch((err) => null);
-
-  return res;
 };
