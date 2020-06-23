@@ -73,6 +73,7 @@ const RegisterForm = () => {
           ))}
         </Select>
       </Form.Item>
+
       <Form.Item
         name="originalValue"
         label="Original value"
@@ -84,28 +85,7 @@ const RegisterForm = () => {
       >
         <Input addonBefore="$ " type="number" placeholder="Value of item at launch" disabled />
       </Form.Item>
-      <Form.Item
-        name="owners"
-        label="Previous owners"
-        rules={[
-          {
-            required: false
-          }
-        ]}
-      >
-        <Input type="number" placeholder="Leave empty if you are the first owner" />
-      </Form.Item>
-      <Form.Item
-        name="state"
-        label="State"
-        rules={[
-          {
-            required: true
-          }
-        ]}
-      >
-        <QualitySlider />
-      </Form.Item>
+
       <Form.Item
         name="lastValue"
         label="Value at last transfer"
@@ -117,6 +97,31 @@ const RegisterForm = () => {
       >
         <Input addonBefore="$ " type="number" placeholder="Last price the item sold for" min={1} max={VALUE_LIMIT} />
       </Form.Item>
+
+      <Form.Item
+        name="state"
+        label="State"
+        rules={[
+          {
+            required: true
+          }
+        ]}
+      >
+        <QualitySlider />
+      </Form.Item>
+
+      <Form.Item
+        name="owners"
+        label="Number of previous owners"
+        rules={[
+          {
+            required: false
+          }
+        ]}
+      >
+        <Input type="number" placeholder="Leave empty if you are the first owner" />
+      </Form.Item>
+
       <Form.Item>
         <Button type="primary" htmlType="submit" className="mr-2">
           Submit
