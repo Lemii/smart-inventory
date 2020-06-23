@@ -2,7 +2,7 @@ export default {
   app: {
     label: 'smart-inventory',
     minVersion: '0.0.1',
-    version: '0.0.1',
+    version: '3.0.2',
     protocolVersion: '1.1',
     ipc: {
       enabled: true
