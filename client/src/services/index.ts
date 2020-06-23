@@ -63,7 +63,7 @@ export const transferItem = (transfer: any, passphrase: string) => {
 
 export const fundAccount = (address: string) => {
   const tx = new transactions.TransferTransaction({
-    asset: { recipientId: address, amount: transactions.utils.convertLSKToBeddows('50000') },
+    asset: { recipientId: address, amount: transactions.utils.convertLSKToBeddows('5000') },
     networkIdentifier: NETWORK_IDENTIFIER,
     timestamp: createNetworkTs()
   });
