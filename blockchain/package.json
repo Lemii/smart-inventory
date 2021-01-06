@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@moosty/lisk-extended-api": "0.0.8",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "lisk-sdk": "^3.0.2",
     "rimraf": "^3.0.2",
